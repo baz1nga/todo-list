@@ -33,6 +33,7 @@ class Todo(models.Model):
     done = models.BooleanField(default=False)
 
     class Meta:
+        ordering = ('-created_date',)
         verbose_name = 'Задача'
         verbose_name_plural = 'Задачи'
 

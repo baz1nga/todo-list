@@ -43,7 +43,7 @@ class Mutation(graphene.ObjectType):
 
     def resolve_add_todo(self, info, **kwargs):
         category, _ = Category.objects.get_or_create(
-            name=kwargs.pop('category'),
+            name=kwargs.pop('category')
         )
         return Todo.objects.create(category=category, **kwargs)
 
